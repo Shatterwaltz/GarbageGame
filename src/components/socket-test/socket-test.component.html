@@ -1,0 +1,13 @@
+<head>
+  <title>Chat</title>
+</head>
+
+<body>
+  <ul id="messages">
+    <li *ngFor="let message of messagesList">{{message}}</li>
+  </ul>
+  <form (ngSubmit)="sendMessage()" #chatForm="ngForm" action="">
+    <input [(ngModel)]="chatBoxText" id="m" autocomplete="off" name="chatbox"/>
+    <button type="submit">Send</button>
+  </form>
+</body>
